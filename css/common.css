@@ -37,7 +37,11 @@
   /* ========== SPACING ========== */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
+<<<<<<< HEAD
   --spacing-md: 1.5rem;
+=======
+  --spacing-md: 2rem;
+>>>>>>> 2dbd56942f8243f0f5c1a480ae316c7760d120ac
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
@@ -841,3 +845,7 @@ button.btn-ghost {
 .link-fade { transition: opacity 260ms ease; }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2dbd56942f8243f0f5c1a480ae316c7760d120ac

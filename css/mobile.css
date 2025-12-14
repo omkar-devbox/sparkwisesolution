@@ -7,7 +7,11 @@
   --spacing-xs: 8px;
   --spacing-sm: 12px;
   --spacing-md: 16px;
+<<<<<<< HEAD
   --spacing-lg: 24px;
+=======
+  --spacing-lg: 25px;
+>>>>>>> 2dbd56942f8243f0f5c1a480ae316c7760d120ac
   --spacing-xl: 32px;
   --nav-bg: #ffffff;
 }
@@ -715,3 +719,8 @@ select:focus-visible {
 }
 
 /* ========== END OF MOBILE STYLES ========== */
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2dbd56942f8243f0f5c1a480ae316c7760d120ac

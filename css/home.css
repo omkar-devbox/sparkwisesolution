@@ -59,6 +59,10 @@
 .hero-content {
   max-width: 100%;
   animation: fadeInLeft var(--animation-duration) ease-out;
+<<<<<<< HEAD
+=======
+  margin-left: 10%
+>>>>>>> 2dbd56942f8243f0f5c1a480ae316c7760d120ac
 }
 
 .hero-badge {
@@ -744,3 +748,7 @@
     font-size: clamp(1.75rem, 5vw, 2.25rem);
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2dbd56942f8243f0f5c1a480ae316c7760d120ac
