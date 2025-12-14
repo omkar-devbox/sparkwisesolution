@@ -7,7 +7,7 @@
   --spacing-xs: 8px;
   --spacing-sm: 12px;
   --spacing-md: 16px;
-  --spacing-lg: 50px;
+  --spacing-lg: 25px;
   --spacing-xl: 32px;
   --nav-bg: #ffffff;
 }
@@ -715,4 +715,5 @@ select:focus-visible {
 }
 
 /* ========== END OF MOBILE STYLES ========== */
+
 
