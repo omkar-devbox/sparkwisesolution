@@ -27,13 +27,14 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/product.css" />
     <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
   </head>
   <body>
     <!-- Header -->
     <header class="header" id="header">
       <div class="header-container">
         <a href="index.html" class="logo">
-          <div class="logo-icon">AI</div>
+          <!-- <div class="logo-icon">AI</div> -->
           <span>Sparkwise Solution</span>
         </a>
         <nav>
@@ -591,15 +592,6 @@
     </footer>
 
     <script>
-      // Mobile menu toggle
-      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-      const navMenu = document.getElementById("navMenu");
-
-      mobileMenuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        mobileMenuToggle.classList.toggle("active");
-      });
-
       // Header scroll effect
       const header = document.getElementById("header");
       window.addEventListener("scroll", () => {
@@ -790,6 +782,7 @@
       });
     </script>
     <script src="js/open-contact.js"></script>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/scroll-animate.js"></script>
   </body>

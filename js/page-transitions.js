@@ -3,7 +3,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Use consistent fade animation for all pages
     const enterAnimation = 'page-enter-fade';
-    const exitAnimation = 'page-exit-fade';
     
     // Add page enter animation
     document.body.classList.add(enterAnimation);
@@ -25,31 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
+            // Use consistent fade animation for all page exits
+            const exitAnimation = 'page-exit-fade';
+            
             e.preventDefault();
-
+            
             // Add exit animation
             document.body.classList.add(exitAnimation);
-
+            
             // Navigate after animation
             const animationDuration = 300;
             setTimeout(() => {
                 window.location.href = href;
             }, animationDuration);
-        });
-    });
-
-    // Make primary CTAs open the contact page with the same exit animation
-    const ctaButtons = document.querySelectorAll('.header-cta, .btn-primary, .cta-button');
-    ctaButtons.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            // If this button is inside a form (submit), let the form handle it
-            if (this.closest && this.closest('form')) return;
-            e.preventDefault();
-
-            const href = 'contact.html';
-            document.body.classList.add(exitAnimation);
-            const animationDuration = 300;
-            setTimeout(() => { window.location.href = href; }, animationDuration);
         });
     });
     

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/ai.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/ai-suggestion.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
   </head>
   <body
     data-ai-suggestion="Use concise examples of defect detection and accuracy stats in H2 to boost relevance."
@@ -35,7 +36,7 @@
     <header class="header" id="header">
       <div class="header-container">
         <a href="index.html" class="logo">
-          <div class="logo-icon">AI</div>
+          <!-- <div class="logo-icon">AI</div> -->
           <span>Sparkwise Solution</span>
         </a>
         <nav>
@@ -660,15 +661,6 @@
     </footer>
 
     <script>
-      // Mobile menu toggle
-      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-      const navMenu = document.getElementById("navMenu");
-
-      mobileMenuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        mobileMenuToggle.classList.toggle("active");
-      });
-
       // Header scroll effect
       const header = document.getElementById("header");
       window.addEventListener("scroll", () => {
@@ -679,6 +671,7 @@
         }
       });
     </script>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/ai-suggestion.js" defer></script>
     <script src="js/open-contact.js"></script>
     <script src="js/page-transitions.js"></script>

@@ -60,38 +60,65 @@
     <link rel="stylesheet" href="css/industries.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/ai-suggestion.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
   </head>
   <body
     data-ai-suggestion="Include industry-specific keywords in H2s (manufacturing, FMCG, medical devices) to improve topical relevance."
   >
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Industries & Applications | Sparkwise</title>
-    <meta name="description" content="Sparkwise AI solutions across manufacturing, automotive, FMCG and medical devices — tailored computer vision for industry-specific inspection needs." />
-    <meta name="keywords" content="Sparkwise, industries, manufacturing, FMCG, medical devices, automotive" />
-    <meta name="author" content="Sparkwise" />
-    <link rel="canonical" href="https://sparkwisesolution.com/industries.html" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:site_name" content="Sparkwise" />
-    <meta property="og:title" content="Industries & Applications | Sparkwise" />
-    <meta property="og:description" content="Sparkwise AI solutions across manufacturing, automotive, FMCG and medical devices — tailored computer vision for industry-specific inspection needs." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sparkwisesolution.com/industries.html" />
-    <meta property="og:image" content="https://sparkwisesolution.com/assets/og-image-industries.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Sparkwise" />
-    <meta name="twitter:creator" content="@Sparkwise" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="theme-color" content="#0a84ff" />
-    <script>
-      document.documentElement.classList.add("is-loading");
-      window.addEventListener("DOMContentLoaded", function () {
-        document.documentElement.classList.remove("is-loading");
-      });
-    </script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Sparkwise","url":"https://sparkwisesolution.com","logo":"https://sparkwisesolution.com/assets/logo.png","sameAs":["https://www.linkedin.com/your","https://twitter.com/Sparkwise"]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://sparkwisesolution.com/","name":"Sparkwise","potentialAction":{"@type":"SearchAction","target":"https://sparkwisesolution.com/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sparkwisesolution.com/"},{"@type":"ListItem","position":2,"name":"Industries","item":"https://sparkwisesolution.com/industries.html"}]}</script>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <!-- <div class="logo-icon">AI</div> -->
+          <span>Sparkwise Solution</span>
+        </a>
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="product.html" class="nav-link">Product</a></li>
+            <li><a href="ai.html" class="nav-link">AI</a></li>
+            <li>
+              <a href="industries.html" class="nav-link active"
+                >Industries & Applications</a
+              >
+            </li>
+            <!-- <li><a href="resources.html" class="nav-link">Resources</a></li> -->
+            <li><a href="about.html" class="nav-link">Company</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="header-cta">Get Started</button>
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-container">
+        <h1 class="page-title">Industries & Applications</h1>
+        <p class="page-subtitle">
+          Transforming operations across diverse sectors with intelligent
+          automation and AI-powered solutions
+        </p>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+      <div class="industries-container">
+        <!-- Manufacturing Industry -->
+        <div class="industry-card">
+          <div class="industry-header">
+            <div class="industry-icon">
+              <svg
+                viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
@@ -648,15 +675,6 @@
     </footer>
 
     <script>
-      // Mobile menu toggle
-      const mobileMenuToggle = document.getElementById("mobileMenuToggle");
-      const navMenu = document.getElementById("navMenu");
-
-      mobileMenuToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        mobileMenuToggle.classList.toggle("active");
-      });
-
       // Header scroll effect
       const header = document.getElementById("header");
       window.addEventListener("scroll", () => {
@@ -667,6 +685,7 @@
         }
       });
     </script>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/open-contact.js"></script>
     <script src="js/page-transitions.js"></script>
     <script src="js/scroll-animate.js"></script>
