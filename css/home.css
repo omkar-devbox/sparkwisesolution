@@ -59,6 +59,7 @@
 .hero-content {
   max-width: 100%;
   animation: fadeInLeft var(--animation-duration) ease-out;
+  margin-left: 10%
 }
 
 .hero-badge {
@@ -744,3 +745,4 @@
     font-size: clamp(1.75rem, 5vw, 2.25rem);
   }
 }
+
