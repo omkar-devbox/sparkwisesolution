@@ -365,83 +365,171 @@
           <a href="industries-applications.html" class="link-arrow">Discover industries and applications →</a>
         </div>
         <div class="industries-wrapper">
-          <ul class="industries-grid" id="industriesGrid">
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">🚗</div>
-              </div>
-              <p>Automobile & Transportation</p>
-              <span class="industry-description">Automated thread inspection and dimensional verification for critical
-                powertrain and chassis components.</span>
-            </li>
+          <div class="industries-marquee">
+            <ul class="industries-grid">
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/automobile.png" alt="Automobile & Transportation" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Automobile & Transportation</p>
+                <span class="industry-description">Automated thread inspection and dimensional verification for critical
+                  powertrain and chassis components.</span>
+              </li>
 
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">💻</div>
-              </div>
-              <p>Electronics and Semiconductors</p>
-              <span class="industry-description">High-precision surface check and component presence verification for
-                PCB and semiconductor assemblies.</span>
-            </li>
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/electronics.png" alt="Electronics and Semiconductors"
+                    class="industry-image" loading="lazy">
+                </div>
+                <p>Electronics and Semiconductors</p>
+                <span class="industry-description">High-precision surface check and component presence verification for
+                  PCB and semiconductor assemblies.</span>
+              </li>
 
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">🔋</div>
-              </div>
-              <p>Battery and Electric Vehicles</p>
-              <span class="industry-description">End-to-end traceability and quality assurance for battery cell
-                production and EV module assembly.</span>
-            </li>
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/battery.png" alt="Battery and Electric Vehicles" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Battery and Electric Vehicles</p>
+                <span class="industry-description">End-to-end traceability and quality assurance for battery cell
+                  production and EV module assembly.</span>
+              </li>
 
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">🏗️</div>
-              </div>
-              <p>Building Materials and Infrastructure</p>
-              <span class="industry-description">Industrial metrology and structural inspection for construction
-                hardware and metal infrastructure.</span>
-            </li>
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/construction.png" alt="Building Materials and Infrastructure"
+                    class="industry-image" loading="lazy">
+                </div>
+                <p>Building Materials and Infrastructure</p>
+                <span class="industry-description">Industrial metrology and structural inspection for construction
+                  hardware and metal infrastructure.</span>
+              </li>
 
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">📦</div>
-              </div>
-              <p>Consumer Goods and FMCG</p>
-              <span class="industry-description">High-speed packaging validation, label verification, and inline
-                weighing to minimize waste.</span>
-            </li>
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/fmcg.png" alt="Consumer Goods and FMCG" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Consumer Goods and FMCG</p>
+                <span class="industry-description">High-speed packaging validation, label verification, and inline
+                  weighing to minimize waste.</span>
+              </li>
 
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">⚡</div>
-              </div>
-              <p>Energy and Utilities</p>
-              <span class="industry-description">SCADA monitoring and quality control for solar, wind, and traditional
-                energy sector components.</span>
-            </li>
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/energy.png" alt="Energy and Utilities" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Energy and Utilities</p>
+                <span class="industry-description">SCADA monitoring and quality control for solar, wind, and traditional
+                  energy sector components.</span>
+              </li>
 
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">📄</div>
-              </div>
-              <p>Paper, Film & Textiles</p>
-              <span class="industry-description">Continuous web inspection for surface defects in paper, films, and
-                high-speed filament monitoring.</span>
-            </li>
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/textiles.png" alt="Paper, Film & Textiles" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Paper, Film & Textiles</p>
+                <span class="industry-description">Continuous web inspection for surface defects in paper, films, and
+                  high-speed filament monitoring.</span>
+              </li>
 
-            <li class="industry-card">
-              <div class="industry-icon-wrapper">
-                <div class="industry-icon">🏥</div>
-              </div>
-              <p>Healthcare and Medical Devices</p>
-              <span class="industry-description">Critical 21 CFR Part 11 ready traceability and vision QC for medical
-                equipment and packaging.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="industries-navigation">
-          <button class="nav-arrow prev" aria-label="Previous">←</button>
-          <button class="nav-arrow next" aria-label="Next">→</button>
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/healthcare.png" alt="Healthcare and Medical Devices"
+                    class="industry-image" loading="lazy">
+                </div>
+                <p>Healthcare and Medical Devices</p>
+                <span class="industry-description">Critical 21 CFR Part 11 ready traceability and vision QC for medical
+                  equipment and packaging.</span>
+              </li>
+            </ul>
+            <!-- Duplicate content for seamless infinite scroll -->
+            <ul class="industries-grid" aria-hidden="true">
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/automobile.png" alt="Automobile & Transportation" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Automobile & Transportation</p>
+                <span class="industry-description">Automated thread inspection and dimensional verification for critical
+                  powertrain and chassis components.</span>
+              </li>
+
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/electronics.png" alt="Electronics and Semiconductors"
+                    class="industry-image" loading="lazy">
+                </div>
+                <p>Electronics and Semiconductors</p>
+                <span class="industry-description">High-precision surface check and component presence verification for
+                  PCB and semiconductor assemblies.</span>
+              </li>
+
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/battery.png" alt="Battery and Electric Vehicles" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Battery and Electric Vehicles</p>
+                <span class="industry-description">End-to-end traceability and quality assurance for battery cell
+                  production and EV module assembly.</span>
+              </li>
+
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/construction.png" alt="Building Materials and Infrastructure"
+                    class="industry-image" loading="lazy">
+                </div>
+                <p>Building Materials and Infrastructure</p>
+                <span class="industry-description">Industrial metrology and structural inspection for construction
+                  hardware and metal infrastructure.</span>
+              </li>
+
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/fmcg.png" alt="Consumer Goods and FMCG" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Consumer Goods and FMCG</p>
+                <span class="industry-description">High-speed packaging validation, label verification, and inline
+                  weighing to minimize waste.</span>
+              </li>
+
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/energy.png" alt="Energy and Utilities" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Energy and Utilities</p>
+                <span class="industry-description">SCADA monitoring and quality control for solar, wind, and traditional
+                  energy sector components.</span>
+              </li>
+
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/textiles.png" alt="Paper, Film & Textiles" class="industry-image"
+                    loading="lazy">
+                </div>
+                <p>Paper, Film & Textiles</p>
+                <span class="industry-description">Continuous web inspection for surface defects in paper, films, and
+                  high-speed filament monitoring.</span>
+              </li>
+
+              <li class="industry-card">
+                <div class="industry-image-wrapper">
+                  <img src="images/industries/healthcare.png" alt="Healthcare and Medical Devices"
+                    class="industry-image" loading="lazy">
+                </div>
+                <p>Healthcare and Medical Devices</p>
+                <span class="industry-description">Critical 21 CFR Part 11 ready traceability and vision QC for medical
+                  equipment and packaging.</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -515,7 +603,8 @@
         <ul class="features-grid">
           <li class="feature-card">
             <div class="feature-image-wrapper">
-              <img src="images/hero-bg.png" alt="Configurable Platform" class="feature-image" loading="lazy" />
+              <img src="images/feature-configurable-platform.png" alt="Configurable Platform" class="feature-image"
+                loading="lazy" />
             </div>
             <div class="feature-content">
               <h3>Simple and Intuitive Platform for Any Operation</h3>
@@ -532,7 +621,8 @@
 
           <li class="feature-card">
             <div class="feature-image-wrapper">
-              <img src="images/hero-bg.png" alt="Advanced Process Monitoring" class="feature-image" loading="lazy" />
+              <img src="images/feature-process-monitoring.png" alt="Advanced Process Monitoring" class="feature-image"
+                loading="lazy" />
             </div>
             <div class="feature-content">
               <h3>Consistent Monitoring Across All Operations</h3>
@@ -548,7 +638,8 @@
 
           <li class="feature-card">
             <div class="feature-image-wrapper">
-              <img src="images/hero-bg.png" alt="Operational Excellence" class="feature-image" loading="lazy" />
+              <img src="images/feature-operational-excellence.png" alt="Operational Excellence" class="feature-image"
+                loading="lazy" />
             </div>
             <div class="feature-content">
               <h3>Driving Operational Excellence Across Teams</h3>
@@ -659,17 +750,7 @@
                 d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-            Wilmington, DE, USA
-          </p>
-          <p>
-            <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 10C21 17 12 23 12 23S3 17 3 10C3 5.03 7.03 1 12 1S21 5.03 21 10Z" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            Bengaluru, KA, India
+            Sangli, MH, India
           </p>
         </div>
         <div class="footer-column">
@@ -718,7 +799,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2024 Sparkwise Solution • All rights reserved</p>
+        <p>© 2025 Sparkwise Solution • All rights reserved</p>
       </div>
     </div>
   </footer>
