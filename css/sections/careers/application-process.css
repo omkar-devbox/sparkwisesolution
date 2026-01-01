@@ -1,0 +1,127 @@
+/* ============================================
+   APPLICATION PROCESS SECTION
+   Steps to Apply
+   ============================================ */
+
+.application-process {
+    padding: 100px 0;
+    background: var(--bg-white);
+}
+
+.application-process .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.application-process .section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    gap: 20px;
+}
+
+/* Connecting Line */
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    /* Center of the number circle (60px height / 2) */
+    left: 40px;
+    right: 40px;
+    height: 2px;
+    background: var(--border-light);
+    z-index: 0;
+}
+
+.process-step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-white);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 8px var(--bg-white);
+    /* Hides the line behind */
+}
+
+.process-step:hover .step-number {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.process-step h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.process-step p {
+    font-size: 15px;
+    color: var(--text-medium);
+    line-height: 1.5;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+    .process-steps::before {
+        display: none;
+    }
+
+    .process-steps {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .process-step {
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+        max-width: 600px;
+        gap: 20px;
+    }
+
+    .step-number {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .process-step p {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .process-step>div {
+        /* Container for text in vertical layout */
+        flex: 1;
+    }
+}

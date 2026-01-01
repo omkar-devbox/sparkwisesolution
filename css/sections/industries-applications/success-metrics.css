@@ -1,0 +1,245 @@
+/* Success Metrics Section */
+.success-metrics {
+    padding: 120px 0;
+    background: var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.success-metrics::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 102, 0, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.success-metrics .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.success-metrics .content-block {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.success-metrics .content-block h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+}
+
+.success-metrics .content-block>p {
+    font-size: 18px;
+    color: var(--text-medium);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: var(--bg-white);
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 102, 0, 0.05);
+}
+
+.metric-card {
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    animation-fill-mode: both;
+    cursor: default;
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.metric-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.metric-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.metric-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.metric-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.metric-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 102, 0, 0.15), transparent);
+    transition: background 0.3s ease;
+}
+
+.metric-card:hover::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 102, 0, 0.25), transparent);
+}
+
+.metric-card:hover {
+    background: rgba(255, 102, 0, 0.04);
+    transform: translateY(-4px) scale(1.02);
+}
+
+.metric-card:hover::before {
+    opacity: 1;
+}
+
+.metric-card:hover .metric-value {
+    transform: scale(1.05);
+}
+
+.metric-card:hover .metric-label {
+    color: var(--text-dark);
+}
+
+.metric-value {
+    font-size: 64px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+    line-height: 1;
+    letter-spacing: -2px;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+    filter: drop-shadow(0 2px 4px rgba(255, 102, 0, 0.2));
+}
+
+.metric-label {
+    color: var(--text-medium);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 200px;
+    margin: 0 auto;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metric-card:nth-child(2)::after {
+        display: none;
+    }
+
+    .metric-card::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        width: 60%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+    }
+}
+
+@media (max-width: 768px) {
+    .success-metrics {
+        padding: 80px 0;
+    }
+
+    .success-metrics .content-block h2 {
+        font-size: 32px;
+    }
+
+    .metric-value {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-metrics {
+        padding: 60px 0;
+    }
+
+    .success-metrics .content-block {
+        margin-bottom: 60px;
+    }
+
+    .success-metrics .content-block h2 {
+        font-size: 28px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        border-radius: 24px;
+    }
+
+    .metric-card {
+        padding: 40px 20px;
+    }
+
+    .metric-card::after {
+        display: none;
+    }
+
+    .metric-card::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        width: 60%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(255, 102, 0, 0.15), transparent);
+    }
+
+    .metric-card:last-child::before {
+        display: none;
+    }
+
+    .metric-value {
+        font-size: 40px;
+    }
+
+    .metric-label {
+        font-size: 14px;
+    }
+
+    .metric-card:hover {
+        transform: translateY(-2px) scale(1.01);
+    }
+}

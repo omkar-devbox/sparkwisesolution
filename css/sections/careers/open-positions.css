@@ -1,0 +1,123 @@
+/* ============================================
+   OPEN POSITIONS SECTION
+   Job Listings
+   ============================================ */
+
+.open-positions {
+    padding: 100px 0;
+    background: var(--bg-light);
+    position: relative;
+}
+
+.open-positions .container {
+    max-width: 1000px;
+    /* Narrower for improved readability of list */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.open-positions .section-title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.positions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.position-card {
+    background: var(--bg-white);
+    border-radius: 16px;
+    padding: 30px 40px;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.position-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+.position-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.position-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.position-location {
+    font-size: 14px;
+    color: var(--text-medium);
+    background: var(--bg-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.position-department {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.position-card p {
+    font-size: 16px;
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 90%;
+}
+
+.position-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: gap 0.3s ease;
+}
+
+.position-link:hover {
+    gap: 12px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .open-positions {
+        padding: 60px 0;
+    }
+
+    .position-card {
+        padding: 24px;
+    }
+
+    .position-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .position-location {
+        margin-top: 5px;
+        display: inline-block;
+    }
+}

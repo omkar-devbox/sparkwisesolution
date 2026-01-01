@@ -1,0 +1,117 @@
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--orange-dark) 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta-section h2 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    line-height: 1.7;
+    text-align: center;
+    width: 100%;
+}
+
+/* CTA Buttons Wrapper */
+.cta-buttons-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 80px 0;
+    }
+
+    .cta-section .container {
+        padding: 0 16px;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .cta-section p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .cta-buttons-wrapper {
+        gap: 16px;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-section .container {
+        padding: 0 12px;
+    }
+
+    .cta-section h2 {
+        font-size: 28px;
+    }
+
+    .cta-section p {
+        font-size: 15px;
+    }
+
+    .cta-buttons-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-buttons-wrapper .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
