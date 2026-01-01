@@ -1,0 +1,126 @@
+/* Applications Section */
+.applications {
+    padding: 100px 0;
+    background: var(--bg-light);
+    position: relative;
+    width: 100%;
+}
+
+.applications .container {
+    position: relative;
+    z-index: 1;
+}
+
+.applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.application-card {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease, transform 0.4s ease;
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.application-card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.application-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-color);
+    background: var(--bg-orange-tint);
+}
+
+.application-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.application-card p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.application-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.application-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.application-link:hover {
+    gap: 10px;
+    color: var(--orange-dark);
+}
+
+.application-link:hover::after {
+    width: 100%;
+}
+
+.applications-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Application Images */
+.application-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background: var(--bg-light);
+}
+
+.application-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.application-icon {
+    font-size: 64px;
+    margin-bottom: 15px;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.application-card:hover .application-icon {
+    transform: scale(1.2) rotate(5deg);
+}

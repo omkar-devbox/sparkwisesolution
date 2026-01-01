@@ -1,0 +1,38 @@
+/* About Content Section - Used in AI page */
+.about-content {
+    padding: 80px 0;
+    background: var(--bg-white);
+}
+
+.about-content.alt-bg {
+    background: var(--bg-light);
+}
+
+.content-block {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-block h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.content-block p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+.content-block h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+

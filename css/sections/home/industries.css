@@ -1,0 +1,288 @@
+/* Industries */
+.industries {
+    padding: 100px 0;
+    background: var(--bg-white);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.industries .container {
+    position: relative;
+    z-index: 1;
+}
+
+.industries .section-header {
+    margin-bottom: 50px;
+}
+
+.industries .section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.industries-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 20px 0;
+    /* Add padding for shadow visibility */
+}
+
+.industries-grid {
+    display: flex;
+    gap: 30px;
+    overflow: visible;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 10px;
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+.industries-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.industries-grid>* {
+    flex: 0 0 280px;
+}
+
+.industry-card {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    /* More rounded */
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    position: relative;
+    min-width: 280px;
+    max-width: 280px;
+    will-change: transform, opacity;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    /* Subtle initial shadow */
+    animation: fadeInScaleUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-play-state: paused;
+}
+
+.industry-card.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    animation-play-state: running;
+}
+
+@keyframes fadeInScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Premium soft shadow */
+    border-color: rgba(255, 102, 0, 0.3);
+}
+
+.industry-icon {
+    font-size: 40px;
+    /* Slightly refined size */
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    text-align: center;
+    vertical-align: middle;
+}
+
+.industry-card:hover .industry-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.industry-card p {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 18px;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+}
+
+.industry-card:hover p {
+    color: var(--primary-color);
+}
+
+.industries-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.industries-navigation .nav-arrow {
+    opacity: 1;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--border-light);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-dark);
+}
+
+.industries-navigation .nav-arrow:disabled {
+    opacity: 0.5;
+    cursor: default;
+    border-color: var(--border-light);
+    background: #fafafa;
+}
+
+.industries-navigation .nav-arrow:not(:disabled):hover {
+    transform: scale(1.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.15);
+}
+
+/* Add fade effect on edges */
+.industries-grid::before,
+.industries-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    pointer-events: none;
+    z-index: 5;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.industries-grid::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-white), transparent);
+    opacity: 0;
+}
+
+.industries-grid::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-white), transparent);
+}
+
+.industries-grid.scrollable-left::before {
+    opacity: 1;
+}
+
+.industries-grid.scrollable-right::after {
+    opacity: 1;
+}
+
+/* Industry Icon Wrapper */
+.industry-icon-wrapper {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
+    border: 1px solid var(--border-light);
+    border-radius: 24px;
+    /* Squircle shape */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.03);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.industry-card:hover .industry-icon-wrapper {
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 102, 0, 0.12);
+    border-color: rgba(255, 102, 0, 0.2);
+}
+
+.industry-description {
+    display: block;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .industries {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .industries-wrapper {
+        padding: 10px;
+        margin-bottom: 24px;
+    }
+
+    .industries-grid {
+        gap: 16px;
+        padding-bottom: 20px;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .industries-grid>* {
+        flex: 0 0 260px;
+        scroll-snap-align: start;
+    }
+
+    .industry-card {
+        padding: 24px 20px;
+        min-width: 260px;
+        margin-bottom: 0;
+    }
+
+    .industry-icon {
+        font-size: 36px;
+    }
+
+    .industry-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 16px;
+        border-radius: 18px;
+    }
+
+    .industry-card p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .industry-card {
+        padding: 20px 16px;
+    }
+}

@@ -1,0 +1,343 @@
+/* ============================================
+   RESOURCES SUCCESS STORIES SECTION
+   ============================================ */
+
+/* Section Container */
+.success-stories {
+    padding: 100px 0;
+    background: var(--bg-light);
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.success-stories::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 80%, rgba(255, 102, 0, 0.03), transparent 50%);
+    pointer-events: none;
+}
+
+.success-stories .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Header */
+.success-stories .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    /* Ensure no global animations affect the header as per user request */
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.success-stories .section-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    /* Ensure static */
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+.success-stories .section-subtitle {
+    font-size: 18px;
+    color: var(--text-medium);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    /* Ensure static */
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Stories Wrapper */
+.stories-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    /* Removed overflow: hidden to allow full grid display without clipping if needed, though grid handles it */
+}
+
+/* Grid Layout - Updated for UL/LI */
+ul.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 32px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Story Cards - generic LI style */
+li.story-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+li.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    /* Smoother deep shadow */
+    border-color: rgba(255, 102, 0, 0.2);
+}
+
+/* Stagger animation for items would require js or nth-child CSS. 
+   Adding basic staggered animation delays for up to 10 items 
+*/
+li.story-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+li.story-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+li.story-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+li.story-card:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+li.story-card:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+li.story-card:nth-child(6) {
+    animation-delay: 0.35s;
+}
+
+li.story-card:nth-child(7) {
+    animation-delay: 0.4s;
+}
+
+li.story-card:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+li.story-card:nth-child(9) {
+    animation-delay: 0.5s;
+}
+
+/* Filtered State styling */
+li.story-card[style*="display: none"] {
+    display: none !important;
+}
+
+/* Story Images */
+.story-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    /* Slightly taller for premium feel */
+    overflow: hidden;
+    background: var(--bg-light);
+}
+
+.story-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+li.story-card:hover .story-image {
+    transform: scale(1.05);
+    /* Subtler zoom */
+}
+
+.story-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.placeholder-icon {
+    font-size: 56px;
+    z-index: 1;
+    position: relative;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.story-category-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Story Content */
+.story-content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.story-content .resource-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.story-content .resource-date,
+.story-content .resource-read-time {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.story-content .resource-date::after {
+    content: '•';
+    margin: 0 0 0 12px;
+    color: var(--border-color);
+}
+
+.story-content .resource-read-time {
+    color: var(--text-lighter);
+}
+
+li.story-card h3 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    transition: color 0.3s ease;
+}
+
+li.story-card:hover h3 {
+    color: var(--primary-color);
+}
+
+li.story-card p {
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    flex: 1;
+    font-size: 15px;
+}
+
+/* Story Link */
+.story-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    font-size: 15px;
+    width: fit-content;
+}
+
+.story-link .arrow-icon {
+    font-size: 18px;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.story-link:hover {
+    color: var(--orange-dark);
+    gap: 12px;
+}
+
+.story-link:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Laptop */
+@media (max-width: 1200px) {
+    ul.stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .success-stories {
+        padding: 80px 0;
+    }
+
+    .story-image-wrapper {
+        height: 220px;
+    }
+
+    .story-content {
+        padding: 24px;
+    }
+
+    li.story-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    ul.stories-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .success-stories .section-title {
+        font-size: 32px;
+    }
+
+    li.story-card {
+        transform: translateY(0) !important;
+        /* Disable hover lift on mobile */
+    }
+
+    .story-image-wrapper {
+        height: 200px;
+    }
+}

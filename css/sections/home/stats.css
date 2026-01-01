@@ -1,0 +1,65 @@
+/* Company Stats Section */
+.company-stats {
+    padding: 80px 0;
+    background: var(--bg-white);
+    position: relative;
+    width: 100%;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin: 0;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--orange-light));
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-color);
+    background: var(--bg-orange-tint);
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 15px;
+    color: var(--text-medium);
+    font-weight: 500;
+    display: block;
+}

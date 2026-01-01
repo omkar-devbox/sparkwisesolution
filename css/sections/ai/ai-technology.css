@@ -1,0 +1,106 @@
+/* AI Technology Section */
+.ai-technology {
+    padding: 80px 0;
+    background: var(--bg-white);
+}
+
+.tech-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tech-text h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.tech-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--text-medium);
+    margin-bottom: 20px;
+}
+
+.tech-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+}
+
+.tech-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-image-wrapper:hover .tech-image {
+    transform: scale(1.05);
+}
+
+.tech-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-item {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--orange-dark);
+}
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+    .tech-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-text h2 {
+        font-size: 28px;
+    }
+
+    .tech-text p {
+        font-size: 16px;
+    }
+
+    .tech-item {
+        padding: 24px;
+        font-size: 16px;
+    }
+
+    .tech-image-wrapper {
+        height: 250px;
+    }
+}
+

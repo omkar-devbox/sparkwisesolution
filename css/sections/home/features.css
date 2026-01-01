@@ -1,0 +1,237 @@
+/* Features */
+.features {
+    padding: 100px 0;
+    background: var(--bg-light);
+    position: relative;
+    width: 100%;
+}
+
+.features .container {
+    position: relative;
+    z-index: 1;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border: 1px solid var(--border-light);
+    position: relative;
+}
+
+.feature-card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-color);
+}
+
+/* Feature Card Split Layout - Content Left, Image Right */
+.feature-card-split {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+}
+
+.feature-card-split .feature-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-card-split .feature-image-wrapper {
+    flex: 1;
+    margin-bottom: 0;
+    height: 100%;
+    min-height: 400px;
+    border-radius: 0;
+}
+
+.feature-card-split .feature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.feature-content {
+    padding: 40px;
+}
+
+.feature-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.feature-content p {
+    color: var(--text-medium);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.feature-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 16px;
+}
+
+.feature-link:hover {
+    color: var(--primary-hover);
+    transform: translateX(5px);
+}
+
+/* Feature Images */
+.feature-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-image {
+    transform: scale(1.05);
+}
+
+.feature-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    height: 250px;
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+}
+
+.feature-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .feature-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.feature-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .features {
+        padding: 60px 0;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .feature-content {
+        padding: 30px 24px;
+    }
+
+    /* Feature Card Split - Tablet */
+    .feature-card-split {
+        flex-direction: row;
+    }
+
+    .feature-card-split .feature-content {
+        padding: 35px 30px;
+    }
+
+    .feature-card-split .feature-image-wrapper {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        gap: 24px;
+    }
+
+    .feature-content {
+        padding: 28px 20px;
+    }
+
+    .feature-content h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .feature-link {
+        font-size: 14px;
+    }
+
+    /* Feature Card Split - Mobile Responsive */
+    .feature-card-split {
+        flex-direction: column;
+    }
+
+    .feature-card-split .feature-content {
+        padding: 30px 20px;
+        order: 1;
+    }
+
+    .feature-card-split .feature-image-wrapper {
+        order: 2;
+        min-height: 250px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-content {
+        padding: 24px 16px;
+    }
+
+    .feature-content h3 {
+        font-size: 18px;
+    }
+
+    /* Feature Card Split - Small Mobile */
+    .feature-card-split .feature-content {
+        padding: 24px 16px;
+    }
+
+    .feature-card-split .feature-image-wrapper {
+        min-height: 200px;
+    }
+}

@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-
-# Sitemap
 Sitemap: https://sparkwisesolution.com/sitemap.xml
