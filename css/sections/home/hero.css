@@ -1,6 +1,9 @@
 /* Hero Section - Orange Theme */
 .hero {
-    background: linear-gradient(135deg, #ff6600 0%, #ff8533 50%, #ff9933 100%);
+    background-image: url('../../../images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 0;
     margin: 0;
@@ -18,9 +21,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background:
-        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
     pointer-events: none;
     z-index: 0;
     animation: fadeIn 1s ease-out;
@@ -49,19 +50,20 @@
 }
 
 .hero-content {
-    flex: 0 1 50%;
-    text-align: left;
-    max-width: 600px;
+    flex: 0 1 100%;
+    text-align: center;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     animation: fadeInLeft 0.8s ease-out;
 }
 
 .hero-title {
-    font-size: 52px;
+    font-size: 64px;
     font-weight: 800;
     margin: 0 0 20px 0;
     padding: 0;
@@ -73,12 +75,12 @@
 }
 
 .hero-description {
-    font-size: 20px;
-    margin: 0 0 30px 0;
+    font-size: 22px;
+    margin: 0 0 40px 0;
     padding: 0;
-    opacity: 0.95;
+    opacity: 1;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.95);
+    color: #ffffff;
     font-weight: 400;
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
@@ -87,7 +89,7 @@
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -146,15 +148,8 @@
 }
 
 .hero-visual {
-    flex: 0 1 50%;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    animation: fadeInRight 0.8s ease-out 0.3s both;
+    display: none;
+    /* Removed original styles to hide the foreground image */
 }
 
 .hero-image-container {

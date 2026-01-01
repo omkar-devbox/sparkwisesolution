@@ -1,7 +1,7 @@
 /* Company Info Section */
 .company-info {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+    background: var(--bg-white);
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -12,6 +12,29 @@
     grid-template-columns: 1.2fr 1fr;
     gap: 60px;
     align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .company-info {
+        padding: 60px 0;
+    }
+
+    .company-info-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .company-info-visual {
+        order: -1;
+        /* Show image first on mobile if preferred, or keep as is. Keeping as is for now implies text first. */
+    }
+}
+
+@media (max-width: 768px) {
+    .company-info-grid {
+        gap: 30px;
+    }
 }
 
 .company-info-content {

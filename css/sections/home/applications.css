@@ -1,7 +1,7 @@
 /* Applications Section */
 .applications {
     padding: 100px 0;
-    background: var(--bg-light);
+    background: var(--bg-white);
     position: relative;
     width: 100%;
 }
@@ -13,114 +13,106 @@
 
 .applications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
 }
 
 .application-card {
     background: white;
-    padding: 32px;
-    border-radius: 16px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease, transform 0.4s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: 1px solid var(--border-light);
     box-shadow: var(--shadow-sm);
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.application-card.animated {
-    opacity: 1;
-    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .application-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--border-color);
-    background: var(--bg-orange-tint);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
 }
 
+/* Image Wrapper */
+.application-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: var(--bg-light);
+}
+
+.application-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.application-card:hover .application-image {
+    transform: scale(1.1);
+}
+
+/* Icon Badge */
+.application-icon {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.application-card:hover .application-icon {
+    transform: scale(1.1) rotate(10deg);
+    background: var(--primary-color);
+}
+
+/* Content */
 .application-card h3 {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px 25px 15px;
     color: var(--text-dark);
 }
 
 .application-card p {
     color: var(--text-light);
-    margin-bottom: 20px;
+    margin: 0 25px 25px;
     line-height: 1.6;
-    font-size: 15px;
+    font-size: 16px;
+    flex-grow: 1;
 }
 
 .application-link {
+    margin: 0 25px 30px;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.application-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 8px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
 }
 
 .application-link:hover {
-    gap: 10px;
+    gap: 12px;
     color: var(--orange-dark);
-}
-
-.application-link:hover::after {
-    width: 100%;
 }
 
 .applications-cta {
     text-align: center;
-    margin-top: 40px;
-}
-
-/* Application Images */
-.application-image-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    background: var(--bg-light);
-}
-
-.application-image-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background: var(--primary-color);
-    opacity: 0.1;
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.application-icon {
-    font-size: 64px;
-    margin-bottom: 15px;
-    display: block;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.application-card:hover .application-icon {
-    transform: scale(1.2) rotate(5deg);
+    margin-top: 60px;
 }
