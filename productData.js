@@ -388,32 +388,6 @@ const productData = {
         cta: "Tell me your workflow and devices.",
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"]
     },
-    plcControl: {
-        title: "PLC Control Suite – Logic & Integration",
-        shortDescription: "PLC-based automation focusing on interlocks, sequence control, and safety.",
-        description: "PLC-based automation for machines and lines including interlocks, sequence control, safety integration, sensors/actuators, and reliable commissioning—focused on uptime and maintainability.",
-        working: [
-            "Define I/O and sequence logic",
-            "Build PLC program + HMI screens",
-            "Integrate sensors, drives, valves, conveyors",
-            "Test + commission with fault handling and diagnostics"
-        ],
-        uses: [],
-        features: [
-            "Structured logic + easy maintenance",
-            "Alarm strategy + troubleshooting screens",
-            "Expandable architecture for future stations"
-        ],
-        specs: {
-            "Platforms": "Siemens, Allen-Bradley, Mitsubishi, Delta",
-            "Languages": "Ladder, SCL, ST (IEC 61131-3)",
-            "Safety": "Safety PLC / Relays integrated",
-            "Network": "Profinet, EtherCAT, EtherNet/IP",
-            "HMI": "Integrated screens"
-        },
-        cta: "Share your I/O list + sequence description + target cycle time.",
-        images: ["https://images.unsplash.com/photo-1580982327559-c1202864eb05?w=800&q=80"]
-    },
     deviceIntegration: {
         title: "ConnectHub Integration – 3rd Party Devices",
         shortDescription: "Reliable integration of sensors, printers, and scanners into your ecosystem.",

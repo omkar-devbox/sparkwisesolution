@@ -1023,16 +1023,6 @@ ctaButtons.forEach(button => {
     });
 });
 
-// Add loading animation for images (if you add images later)
-const images = document.querySelectorAll('img');
-images.forEach(img => {
-    img.addEventListener('load', function () {
-        this.style.opacity = '1';
-    });
-    img.style.opacity = '0';
-    img.style.transition = 'opacity 0.3s';
-});
-
 // Counter Animation for Stats
 function animateCounter(element, target, duration = 2000) {
     const start = 0;
